@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "8ec3dee2-a7a9-4a11-aea5-cf6e0c3c6a77",
+		"name": "sadvik-java-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user-service",
+			"item": [
+				{
+					"name": "register-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"one\",\r\n    \"middleName\":\"mname\",\r\n    \"lastName\":\"lname\",\r\n    \"emailId\":\"two@gmail.com\",\r\n    \"password\":\"pwd\",\r\n    \"role\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-by-id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "4",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/details/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"details",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-current-user-details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "2",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":2,\r\n    \"firstName\":\"uuuuuuu\",\r\n    \"middleName\":\"test-update\",\r\n    \"lastName\":\"bd\",\r\n    \"emailId\":\"tesht@gmail.com\",\r\n    \"role\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/details/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"details",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user-by-id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/user/api/v1/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"api",
+								"v1",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "journal-service",
+			"item": [
+				{
+					"name": "get-all-user-events",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "3",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pwd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/journal/api/v1/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"journal",
+								"api",
+								"v1",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
